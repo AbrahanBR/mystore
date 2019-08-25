@@ -1,0 +1,14 @@
+<h3> Cart </h3>
+
+<a roterLink="/shipping">
+  Shipping Prices
+</a>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>
+    {{ item.name }}
+  </span>
+  <span>
+    {{ item.price | currency}}
+  </span>
+</div>

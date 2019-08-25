@@ -12,3 +12,21 @@
     {{ item.price | currency}}
   </span>
 </div>
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form); form.reset()" novalidate>
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" ngModel name="name" required/>
+  </div>
+
+  <div>
+      <label for="address">
+        Address
+      </label>
+      <input id="address" type="text" ngModel name="address" required/>
+    </div>
+
+  <button classe="button" type="submit" [disabled]="form.invalid">Purchase</button>
+</form>
